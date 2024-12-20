@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
+  <script src="scripts.js"></script>
+<title>About us</title>
+
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">About Us</a>
+  <a href="membership.html">Membership</a>
+  <a href="creativity.html">Creativity</a>
+</div>
+
+
+<div class="text">
+
+  <h1 id="dynamic-text" class="text" onclick="changeColor()">Welcome to BlueBull Sports</h1>
+  <script>
+    const colors = ['green', 'blue', 'red'];
+    let currentIndex = 0;
+
+    function changeColor() {
+        const textElement = document.getElementById('dynamic-text');
+
+        textElement.style.color = colors[currentIndex];
+
+        currentIndex = (currentIndex + 1) % colors.length;
+    }
+    setInterval(changeColor, 1000);
+</script>
+  <a href="membership.html">Join us</a>
+</div>
+
+
+<div class="container">
+  <div class="box">
+    <h3>Why we need sport:</h3>
+    <ul>
+      <li>Improve physical health, enhance cardiopulmonary function, and reduce the risk of cardiovascular disease.</li>
+      <li>Promote mental health, reduce stress and release negative emotions.</li>
+      <li>Improve physical fitness and endurance, enhance muscle strength and bone density, and prevent osteoporosis.</li>
+      <li>Provide opportunities to meet new friends, enrich life content and increase the fun of life..</li>
+    </ul>
+  </div>
+  <div class="image-container">
+    <img src="map.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>BlueBull gives you wings</p>
+    <p>Your capabilities can exceed your expectations</p>
+  </div>
+</div>
+
+
+</body>
+<footer>
+  <p>Contact us: bluebull@gmail.com | Phone:(911)-911-1111</p>
+</footer>
+</html>

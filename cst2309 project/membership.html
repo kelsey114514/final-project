@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">About Us</a> <!-- Links to index.html -->
+    <a href="membership.html">Membership</a> <!-- Links to membership.html -->
+    <a href="creativity.html">Creativity</a> <!-- Links to creativity.html -->
+  </div>
+
+  <main>
+
+    <section>
+
+      <form id="membershipForm">
+        <h1>Sign Up</h1>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="Membership">Membership plan:</label>
+        <select id="Membership" name="Membership" required>
+          <option value="" disabled selected>Select Membership</option>
+          <option value="Ordinary">Ordinary Member|15$ permon</option>
+          <option value="vip">VIP|25$ permon</option>
+          <option value="vvip">VVIP|35$ permon</option>
+        </select>
+
+
+        <button type="submit">Join Now</button>
+      </form>
+      <div id="formErrors"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us: bluebull@gmail.com | Phone:(911)-911-1111</p>
+  </footer>
+
+</body>
+</html>
