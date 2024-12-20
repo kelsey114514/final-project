@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creativity</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="creativity.css">
+</head>
+<body>
+  <!-- Responsive Navigation Bar -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">About Us</a>
+    <a href="membership.html">Membership</a>
+    <a href="creativity.html">Creativity</a>
+  </div>
+
+  <!-- Page Content -->
+  <header>
+    <h1>Learn about extreme sports</h1>
+  </header>
+  <div class="content">
+    <div class="image-container">
+      <img src="sport.jpg" alt="Creative Image">
+    </div>
+    <div class="video-links">
+      <h2>Challenge the limits of human beings:</h2>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch Video 1
+      <img src="v1.jpg" alt="v1"class="video-image"></a>
+      <a href="https://www.youtube.com/watch?v=BFo8xW1JlBE" target="_blank">Watch Video 2
+      <img src="v2.jpg" alt="v2"class="video-image"></a>
+      <a href="https://www.youtube.com/shorts/3sjuTVMWmOU" target="_blank">Watch Video 3
+      <img src="v3.jpg" alt="v3"class="video-image"></a>
+
+    </div>
+  </div>
+  <footer>
+    <p>Contact us: bluebull@gmail.com | Phone:(911)-911-1111</p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    const slides = document.querySelectorAll('.slideshow-container img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }, 5000);
+  </script>
+</body>
+</html>
